@@ -31,30 +31,5 @@ Database ..> Quiz
 Database ..> Question
 Database ..> Answer
 
-
-
 @enduml
 
-
-@startuml
-!pragma layout smetana
-class Player {
-  name
-  score
-}
-
-class Quiz {
-  player
-  questions
-}
-
-class Question {
-  questionText
-  options
-  correctAnswer
-}
-
-Player -- Quiz
-Quiz -- Question
-
-@enduml
