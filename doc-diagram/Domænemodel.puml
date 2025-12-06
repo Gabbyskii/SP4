@@ -9,71 +9,27 @@ object Answer
 object Score
 object UserResponse
 object Category
-object DatabaseManager
+object Database
 
 ' Komposition - Quiz består af Questions
-Quiz *-- Question : består af
+Quiz *-- Question
 
 ' Komposition - Question består af Answers
-Question *-- Answer : består af
+Question *-- Answer
 
 ' Association - Quiz tracker Score
-Quiz -- Score : tracker
+Quiz -- Score
 
 ' Association - Question tilhører Category
-Question -- Category : tilhører
+Question -- Category
 
 ' Association - Question modtager UserResponse
-Question -- UserResponse : modtager
+Question -- UserResponse
 
 ' Dependency - DatabaseManager håndterer data
-DatabaseManager ..> Quiz : henter/gemmer
-DatabaseManager ..> Question : henter/gemmer
-DatabaseManager ..> Answer : henter/gemmer
-
-note right of Quiz
-  En Quiz-session med
-  5 spørgsmål til
-  datamatiker studerende
-end note
-
-note bottom of Question
-  Hvert spørgsmål har
-  præcis 4 svarmuligheder
-  og 1 korrekt svar
-end note
-
-note left of Answer
-  Svarmuligheder
-  nummereret 1-4
-end note
-
-note top of Score
-  Tracker korrekte svar
-  og beregner procent
-end note
+Database ..> Quiz
+Database ..> Question
+Database ..> Answer
 
 @enduml
 
-
-@startuml
-class Player {
-  name
-  score
-}
-
-class Quiz {
-  player
-  questions
-}
-
-class Question {
-  questionText
-  options
-  correctAnswer
-}
-
-Player -- Quiz
-Quiz -- Question
-
-@enduml
