@@ -1,0 +1,65 @@
+@startuml
+
+!pragma layout smetana
+
+class Quiz
+class Player
+class Question
+class DatabaseManager
+
+Quiz *-- Player
+Quiz o-- Question
+
+DatabaseManager ..> Question
+
+class DatabaseManager {
+- String DB_URL
++ initializeDatabase()
+- insertSampleQuestions(Connection conn)
++ getAllQuestions() List<Question>
+}
+
+class Player {
+- int id
+- int score
+- String playername
++ Player(int id, int score, String playername)
++ getId() int
++ getScore() int
++ getPlayername() String
++ setId(int id)
++ setScore(int score)
++ setPlayername(String playername)
+}
+
+class Question {
+- int id
+- String question
+- String[] options
+- int correctAnswer
+- String category
+- String explanation
++ Question(int id, String question, String[] options, int correctAnswer)
++ getId() int
++ getQuestion() String
++ getOptions() String[]
++ getCorrectAnswer() int
++ getCategory() String
++ getExplanation() String
++ checkAnswer(int userAnswer) boolean
+}
+
+class Quiz {
+- Player player
+- List<Question> questions
+- int currentQuestionIndex
++ Quiz(Player player)
++ loadQuestions()
++ start()
++ nextQuestion()
++ submitAnswer(int answer)
++ calculateScore() int
++ showResults()
+}
+
+@enduml
