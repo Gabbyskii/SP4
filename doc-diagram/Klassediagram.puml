@@ -22,7 +22,7 @@ end note
 
 class Database {
 - String DB_URL
-+ initializeDatabase()
++ startDatabase()
 - insertQuestions(Connection conn)
 + getQuestionById(int id) Question
 + getTotalQuestions() int

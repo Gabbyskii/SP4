@@ -1,8 +1,6 @@
 @startuml
 !pragma layout smetana
 
-' Domænemodel for Java Quiz Applikation
-
 object Quiz
 object Question
 object Answer
