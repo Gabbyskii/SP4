@@ -46,7 +46,6 @@ class Question {
 + getCorrectAnswer() int
 + getCategory() String
 + getExplanation() String
-+ checkAnswer(int userAnswer) boolean
 }
 
 class Quiz {
