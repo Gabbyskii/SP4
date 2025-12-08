@@ -11,7 +11,7 @@ Spilleren=  En studerende der vil teste sin viden om Java programmering.
 Domæne entiteter
 Spilleren: En person med et navn og en score. Spilleren besvarer spørgsmål 
 og optjener point for korrekte svar.
-Spørgsmål: Består af en spørgsmålstekst, 4 svarmuligheder (A, B, C, D) 
+Spørgsmål: Består af en spørgsmålstekst, 4 svarmuligheder (1, 2, 3, 4) 
 og ét korrekt svar. Spørgsmålene handler om Java emner fra 1. semester.
 Quiz: Selve spillet, der styrer flowet. Indeholder 10 spørgsmål som 
 præsenteres for en ad gangen.
@@ -23,7 +23,7 @@ præsenteres for en ad gangen.
 - En Spiller giver ét svar per Spørgsmål
 Regler
 Quiz flow: 1. Spilleren indtaster navn -> Quizzen starter -> Spørgsmål vises 
-ét ad gangen random -> Spilleren vælger svar (A-D) -> Systemet tjekker svaret ->
+ét ad gangen random -> Spilleren vælger svar (1-4) -> Systemet tjekker svaret ->
 Feedback gives -> Score opdateres -> Næste spørgsmål vises -> til sidst vises endelig resultat.
 Scoring: Spilleren starter på 0 point. Hvert korrekt svar giver 1 point. 
 Forkerte svar giver 0 point. Score vises løbende efter hvert spørgsmål.
@@ -32,7 +32,7 @@ Validering: Kun input A, B, C eller D accepteres som svar.
 Funktionalitet
 Spørgsmål og svar
 - Systemet skal kunne vise spørgsmål om Java programmering
-- Hvert spørgsmål skal have 4 svarmuligheder (multiple choice: A, B, C, D)
+- Hvert spørgsmål skal have 4 svarmuligheder (multiple choice: 1, 2, 3, 4)
 - Kun ét svar skal være korrekt
 - Spilleren skal kunne vælge et svar
 - Systemet skal give feedback på om svaret var rigtigt eller forkert
@@ -50,6 +50,8 @@ If-statements
 Arrays og ArrayList
 Metoder
 Klasser og objekter
+Scanner
+
 
  Afslutning
 - Efter alle spørgsmål skal systemet vise resultatet
