@@ -56,7 +56,7 @@ Scanner
  Afslutning
 - Efter alle spørgsmål skal systemet vise resultatet
 - Systemet skal give en vurdering baseret på score:
-  - 8/10: "Fremragende! Du mestrer Java!"
-  - 6/7: "Godt klaret!"
-  - 4/5: "Okay resultat. Øv mere!"
+  - 8/10: "Fantastisk! Du er en Java-vogter!"
+  - 6/10: "Godt klaret! Du har styr på det!"
+  - 4/10: "Mid besvarelse! Øv dig lidt mere!"
   - 1/3: "Tid til genopfriskning!"
