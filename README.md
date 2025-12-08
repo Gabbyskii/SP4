@@ -27,7 +27,7 @@ Quiz flow: 1. Spilleren indtaster navn -> Quizzen starter -> Spørgsmål vises
 Feedback gives -> Score opdateres -> Næste spørgsmål vises -> til sidst vises endelig resultat.
 Scoring: Spilleren starter på 0 point. Hvert korrekt svar giver 1 point. 
 Forkerte svar giver 0 point. Score vises løbende efter hvert spørgsmål.
-Validering: Kun input A, B, C eller D accepteres som svar.
+Validering: Kun input 1, 2, 3 eller 4 accepteres som svar.
 
 Funktionalitet
 Spørgsmål og svar
