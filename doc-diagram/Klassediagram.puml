@@ -5,18 +5,27 @@
 class Quiz
 class Player
 class Question
-class DatabaseManager
+class Database
+class TextUI
+
+TextUI --> Quiz
 
 Quiz *-- Player
 Quiz o-- Question
 
-DatabaseManager ..> Question
+Database ..> Question
+note right of Question
+   Question has 4. options
+   gemt i array
+end note
 
-class DatabaseManager {
+
+class Database {
 - String DB_URL
 + initializeDatabase()
-- insertSampleQuestions(Connection conn)
-+ getAllQuestions() List<Question>
+- insertQuestions(Connection conn)
++ getQuestionById(int id) Question
++ getTotalQuestions() int
 }
 
 class Player {
@@ -59,6 +68,19 @@ class Quiz {
 + submitAnswer(int answer)
 + calculateScore() int
 + showResults()
+}
+
+class TextUI {
+- Scanner scanner
+- Quiz quiz
++ TextUI()
++ run()
+- welcomeMsg()
+- getPlayerName() String
+- displayQuestion(Question question)
+- getUserAnswer() int
+- displayResult(boolean correct, Question question)
+- displayFinalScore()
 }
 
 @enduml
