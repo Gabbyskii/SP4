@@ -1,8 +1,10 @@
+package domain;
+
 import java.sql.*;
 
 // Manages all database operations (create, insert, read)
 public class Database {
-    // Database file location
+    // domain.Database file location
     private static final String DB_URL = "jdbc:sqlite:java_quiz.db";
 
     // Initialize database: create table and insert sample questions if needed
@@ -35,7 +37,7 @@ public class Database {
             }
 
         } catch (SQLException e) {
-            System.err.println("Database error: " + e.getMessage());
+            System.err.println("domain.Database error: " + e.getMessage());
         }
     }
 
@@ -48,7 +50,7 @@ public class Database {
             """;
 
         try (PreparedStatement pstmt = conn.prepareStatement(insertSQL)) {
-            // Question 1: Variables + Datatypes
+            // domain.Question 1: Variables + Datatypes
             pstmt.setString(1, "Hvilken datatype bruges til heltal i Java?");
             pstmt.setString(2, "int");
             pstmt.setString(3, "double");
@@ -59,7 +61,7 @@ public class Database {
             pstmt.setString(8, "int gemmer heltal, f.eks. int alder = 25;");
             pstmt.executeUpdate();
 
-            // Question 2: Loops + Conditions
+            // domain.Question 2: Loops + Conditions
             pstmt.setString(1, "Hvilken loop bruges når man ikke ved hvor mange gange koden skal køre?");
             pstmt.setString(2, "for");
             pstmt.setString(3, "while");
@@ -70,7 +72,7 @@ public class Database {
             pstmt.setString(8, "while kører så længe en betingelse er sand, f.eks. while(x < 10)");
             pstmt.executeUpdate();
 
-            // Question 3: Functions + Objects
+            // domain.Question 3: Functions + Objects
             pstmt.setString(1, "Hvad kaldes en funktion der tilhører en klasse?");
             pstmt.setString(2, "Variabel");
             pstmt.setString(3, "Metode");
@@ -81,7 +83,7 @@ public class Database {
             pstmt.setString(8, "Funktioner inde i klasser kaldes metoder, f.eks. public void greet() { }");
             pstmt.executeUpdate();
 
-            // Question 4: Arrays
+            // domain.Question 4: Arrays
             pstmt.setString(1, "Hvordan opretter man et array med 5 heltal?");
             pstmt.setString(2, "int[] arr = new int[5]");
             pstmt.setString(3, "int arr = 5");
@@ -92,7 +94,7 @@ public class Database {
             pstmt.setString(8, "int[] arr = new int[5] opretter et array med plads til 5 heltal");
             pstmt.executeUpdate();
 
-            // Question 5: Filer + Composition
+            // domain.Question 5: Filer + Composition
             pstmt.setString(1, "Hvordan læser du en fil i Java?");
             pstmt.setString(2, "Med File og Scanner");
             pstmt.setString(3, "Med System.out.println");
@@ -103,7 +105,7 @@ public class Database {
             pstmt.setString(8, "File klassen bruges til at pege på filen og Scanner til at læse indholdet");
             pstmt.executeUpdate();
 
-            // Question 6: array[] + ArrayList
+            // domain.Question 6: array[] + ArrayList
             pstmt.setString(1, "Hvad er forskellen på array og ArrayList?");
             pstmt.setString(2, "Ingen forskel");
             pstmt.setString(3, "Array har fast størrelse, ArrayList kan ændres");
@@ -114,7 +116,7 @@ public class Database {
             pstmt.setString(8, "Array har fast størrelse (int[] nums = new int[5]), ArrayList kan vokse dynamisk");
             pstmt.executeUpdate();
 
-            // Question 7: CLI, Java klassen, Scanner
+            // domain.Question 7: CLI, Java klassen, Scanner
             pstmt.setString(1, "Hvad gør Scanner klassen?");
             pstmt.setString(2, "Printer til konsollen");
             pstmt.setString(3, "Læser input fra brugeren");
@@ -125,7 +127,7 @@ public class Database {
             pstmt.setString(8, "Scanner læser brugerinput: Scanner scan = new Scanner(System.in);");
             pstmt.executeUpdate();
 
-            // Question 8: Nedarvning + Interfaces
+            // domain.Question 8: Nedarvning + Interfaces
             pstmt.setString(1, "Hvad betyder \"extends\" i Java?");
             pstmt.setString(2, "At nedarve fra en klasse");
             pstmt.setString(3, "At lave en variabel");
@@ -136,7 +138,7 @@ public class Database {
             pstmt.setString(8, "extends bruges til nedarvning: class Hund extends Dyr arver fra Dyr-klassen");
             pstmt.executeUpdate();
 
-            // Question 9: Datastrukturer
+            // domain.Question 9: Datastrukturer
             pstmt.setString(1, "Hvilken datastruktur bruges til at gemme nøgle-værdi par?");
             pstmt.setString(2, "ArrayList");
             pstmt.setString(3, "Array");
@@ -147,7 +149,7 @@ public class Database {
             pstmt.setString(8, "HashMap gemmer data som nøgle-værdi par: map.put(\"navn\", \"Anna\")");
             pstmt.executeUpdate();
 
-            // Question 10: Databaser
+            // domain.Question 10: Databaser
             pstmt.setString(1, "Hvilket SQL-kommando bruges til at hente data fra en database?");
             pstmt.setString(2, "INSERT");
             pstmt.setString(3, "UPDATE");
@@ -172,7 +174,7 @@ public class Database {
             pstmt.setInt(1, id);
             ResultSet rs = pstmt.executeQuery();
 
-            // If question found, create and return Question object
+            // If question found, create and return domain.Question object
             if (rs.next()) {
                 String[] options = {
                         rs.getString("option1"),

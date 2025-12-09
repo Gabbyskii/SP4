@@ -1,3 +1,5 @@
+package domain;
+
 // Represents a user of the quiz system
 public class Player {
 

@@ -1,3 +1,5 @@
+package domain;
+
 // Represents a quiz question with multiple choice options
 public class Question {
     private int id;

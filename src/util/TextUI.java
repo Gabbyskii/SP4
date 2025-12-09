@@ -1,4 +1,9 @@
+package util;
+import domain.Player;
+import domain.Quiz;
 import java.util.Scanner;
+import domain.Question;
+import domain.Database;
 
 // Handles all user interaction and console communication
 public class TextUI {

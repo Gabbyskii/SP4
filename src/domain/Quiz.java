@@ -1,3 +1,5 @@
+package domain;
+
 // Manages quiz logic and question flow
 public class Quiz {
     private Player player;

@@ -1,3 +1,6 @@
+import domain.Database;
+import util.TextUI;
+
 public static void main(String[] args) {
     // Initialize database
     Database.startDatabase();
