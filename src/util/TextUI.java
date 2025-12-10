@@ -37,7 +37,7 @@ public class TextUI {
     }
 
     private String getPlayerName() {
-        System.out.print("Indtast dit navn: ");
+        System.out.print("Indtast dit spilnavn: ");
         return scanner.nextLine().trim();
     }
 
