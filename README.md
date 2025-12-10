@@ -40,4 +40,4 @@ Afslutning
 10/10: "Fantastisk! Du er en Java-vogter!"
 8/10: "Godt klaret! Du har styr på det!"
 5/10: "Mid besvarelse! Øv dig lidt mere!"
-2/10: "Hvornår var du sidst til undervisningen? Lol"
+0-4/10: "Hvornår var du sidst til undervisningen? Lol"
